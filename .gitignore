@@ -1,0 +1,6 @@
+/data/mongodb6/db/*
+/data/mysql8/*
+/data/redis/*
+/package
+/www/*
+*.log
