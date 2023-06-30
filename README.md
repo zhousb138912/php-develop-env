@@ -18,7 +18,7 @@
 git clone git@github.com:zhousb138912/php-develop-env.git
 ```
 
-### 2. 先将docker镜象接取到本地
+### 2. 将docker镜象拉取到本地
 ```shell
 docker pull zhousb138912/phpenv:1
 ```
