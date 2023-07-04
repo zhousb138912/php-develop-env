@@ -94,6 +94,12 @@ mongod -f /server/etc/mongodb6/mongodb.conf --shutdown
 mongod -f /server/etc/mongodb6/mongodb.conf
 ```
 
+## 安装扩展
+### 环境已经集成了pecl，可以直接安装，以下为安装例子
+```shell
+pecl install redis
+```
+
 ## 添加网站项目
 ### 克隆其它PHP项目到本项目www目录中，再配置etc/nginx目录中的配置文件，就可以开始开发了
 
