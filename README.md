@@ -29,7 +29,9 @@ docker pull zhousb138912/phpenv:1
 docker run -itd --privileged --name phpenv -p 80:80 -p 6379:6379 -p 3306:3306 -p 27017:27017 -v C:\Users\12923\php-develop-env:/server  zhousb138912/phpenv:1 /usr/sbin/init
 ```
 
-### 4. 进入到容器，执行初始化脚本
+### 4. 在本地用编辑器或IDE修改 init.sh 和 start.sh 两个脚本的回车换行符，将 CRLF 改成 LF，不然脚本内命令行执行会有问题
+
+### 5. 进入到容器，执行初始化脚本
 ```shell
 # 进入容器
 docker exec -it phpenv /usr/bin/bash
@@ -38,19 +40,19 @@ chmod +x ./init.sh
 ./init.sh
 ```
 
-### 5. 给日志文件777权限
+### 6. 给日志文件777权限
 ```shell
 chmod 777 -R /server/log
 ```
 
-### 6. 启动各服务
+### 7. 启动各服务
 ```shell
 cd /server
 chmod +x ./start.sh
 ./start.sh
 ```
 
-### 7.修改mysql数据库用户名密码
+### 8.修改mysql数据库用户名密码
 - 在物理机本项目的目录地址下./php-develop-env/log/mysql8/mysql.log的日志里找到password关键字，后面就是登录密码
 ```shell
 mysql -uroot -p
@@ -78,7 +80,7 @@ exit;
 systemctl restart mysqld
 ```
 
-### 8. 修改mongodb数据库
+### 9. 修改mongodb数据库
 ```shell
 # 进入数据库
 mongosh mongodb://127.0.0.1:27017
