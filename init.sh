@@ -13,3 +13,4 @@ chmod 777 -R /server/data
 touch /server/log/mongodb6/mongodb.log
 rm -rf /etc/my.cnf
 cp /server/etc/mysql/my.cnf /etc/
+
