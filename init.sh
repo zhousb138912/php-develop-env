@@ -8,6 +8,8 @@ mkdir -p /server/log/nginx
 mkdir -p /server/log/php8.1
 mkdir -p /server/log/redis
 mkdir -p /server/www
+chmod 777 -R /server/log
+chmod 777 -R /server/data
 touch /server/log/mongodb6/mongodb.log
-rm /etc/my.cnf
+rm -rf /etc/my.cnf
 cp /server/etc/mysql/my.cnf /etc/
